@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>
+        Tushar Grocery - Admin Panel
+    </title>
+
+
+    <link rel="stylesheet" href="admin.css">
+
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================
+     HEADER
+========================== -->
+
+
+    <header class="admin-header">
+
+
+        <h1>
+            🛒 Tushar Grocery Admin
+        </h1>
+
+
+
+        <div class="admin-actions">
+
+
+            <button onclick="location.reload()">
+
+🔄 Refresh
+
+</button>
+
+
+
+            <button onclick="adminLogout()">
+
+Logout
+
+</button>
+
+
+        </div>
+
+
+    </header>
+
+
+
+
+
+
+
+    <!-- ==========================
+     DASHBOARD CARDS
+========================== -->
+
+
+    <section class="dashboard">
+
+
+
+        <div class="card">
+
+
+            <h2>
+                📦 Total Orders
+            </h2>
+
+
+            <h1 id="totalOrders">
+
+                0
+
+            </h1>
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="card">
+
+
+            <h2>
+                👥 Total Users
+            </h2>
+
+
+            <h1 id="totalUsers">
+
+                0
+
+            </h1>
+
+
+        </div>
+
+
+
+
+
+
+        <div class="card">
+
+
+            <h2>
+                💰 Status
+            </h2>
+
+
+            <h1>
+
+                Online
+
+            </h1>
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-- ==========================
+     ORDER SECTION
+========================== -->
+
+
+    <section class="orders">
+
+
+        <h2>
+            📋 Customer Orders
+        </h2>
+
+
+
+        <div id="ordersList">
+
+
+            <div class="loading">
+
+                Loading Orders...
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- ==========================
+     JAVASCRIPT
+========================== -->
+
+
+    <script src="./admin.js"></script>
+
+
+
+</body>
+
+</html>

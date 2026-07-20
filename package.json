@@ -1,0 +1,18 @@
+{
+    "name": "tushar-grocery-store",
+    "version": "1.0.0",
+    "description": "Tushar Grocery Store",
+    "main": "server.js",
+    "type": "commonjs",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "body-parser": "^2.3.0",
+        "cors": "^2.8.5",
+        "express": "^5.1.0",
+        "mongoose": "^8.0.0",
+        "nodemailer": "^7.0.0",
+        "razorpay": "^2.9.6"
+    }
+}

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tushar Grocery Store</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+
+        <div class="logo">
+            🛒 Tushar Grocery
+        </div>
+
+
+
+
+        <div class="search-box">
+
+            <input type="text" id="searchInput" placeholder="Search products...">
+
+        </div>
+
+
+
+
+
+        <div class="user-area">
+
+
+            <span id="userName">
+👤 Guest
+</span>
+
+
+
+
+            <button type="button" id="loginBtn">
+
+Login
+
+</button>
+
+
+
+
+
+            <button type="button" id="logoutBtn" style="display:none;">
+
+Logout
+
+</button>
+
+
+
+        </div>
+
+
+
+
+
+        <div class="icons">
+
+
+            <div>
+
+                ❤️ Wishlist (
+                <span id="wishlistCount">
+0
+</span> )
+
+            </div>
+
+
+
+
+            <div>
+
+                🛒 Cart (
+                <span id="cartCount">
+0
+</span> )
+
+            </div>
+
+
+
+        </div>
+
+
+    </header>
+
+
+
+
+
+
+
+
+    <!-- CATEGORY -->
+
+
+    <section class="categories">
+
+
+        <button type="button" class="category-btn active" data-category="All">
+
+All
+
+</button>
+
+
+
+
+        <button type="button" class="category-btn" data-category="Atta">
+
+Atta
+
+</button>
+
+
+
+
+        <button type="button" class="category-btn" data-category="Rice">
+
+Rice
+
+</button>
+
+
+
+
+        <button type="button" class="category-btn" data-category="Oil">
+
+Oil
+
+</button>
+
+
+
+
+        <button type="button" class="category-btn" data-category="Tea">
+
+Tea
+
+</button>
+
+
+
+
+        <button type="button" class="category-btn" data-category="Snacks">
+
+Snacks
+
+</button>
+
+
+
+
+        <button type="button" class="category-btn" data-category="Biscuits">
+
+Biscuits
+
+</button>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-- FEATURED -->
+
+
+    <section class="section">
+
+
+        <h2>
+            ⭐ Featured Products
+        </h2>
+
+
+        <div id="featuredProducts" class="product-container">
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- SORT -->
+
+
+    <div class="sort-box">
+
+
+        <select id="sortProducts">
+
+
+<option value="default">
+Sort By
+</option>
+
+
+<option value="low">
+Price Low To High
+</option>
+
+
+<option value="high">
+Price High To Low
+</option>
+
+
+<option value="az">
+Name A-Z
+</option>
+
+
+<option value="za">
+Name Z-A
+</option>
+
+
+<option value="discount">
+Highest Discount
+</option>
+
+
+<option value="stock">
+Stock Available
+</option>
+
+
+</select>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- PRODUCTS -->
+
+
+    <section class="section">
+
+
+        <h2>
+            🛒 All Products
+        </h2>
+
+
+
+
+        <div id="productContainer" class="product-container">
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- CART -->
+
+
+    <section class="cart-section">
+
+
+        <h2>
+            🛒 Your Cart
+        </h2>
+
+
+
+        <div id="cartItems">
+
+            Your Cart Is Empty
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class="summary">
+
+
+            <h3>
+                Order Summary
+            </h3>
+
+
+
+
+            <p>
+
+                Subtotal :
+
+                <span id="subtotal">
+₹0
+</span>
+
+            </p>
+
+
+
+
+            <p>
+
+                Discount :
+
+                <span id="discountAmount">
+₹0
+</span>
+
+            </p>
+
+
+
+
+            <p>
+
+                Delivery :
+
+                <span id="deliveryCharge">
+₹40
+</span>
+
+            </p>
+
+
+
+
+            <h2>
+
+                Total :
+
+                <span id="grandTotal">
+₹0
+</span>
+
+            </h2>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- COUPON -->
+
+
+        <div class="coupon-box">
+
+
+            <input type="text" id="couponCode" placeholder="Enter Coupon Code">
+
+
+
+
+            <button type="button" id="applyCouponBtn">
+
+Apply
+
+</button>
+
+
+
+
+
+
+            <button type="button" id="removeCouponBtn">
+
+Remove
+
+</button>
+
+
+
+
+
+            <p id="couponStatus"></p>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- CUSTOMER DETAILS -->
+
+
+        <div class="customer-box">
+
+
+            <h3>
+                Delivery Details
+            </h3>
+
+
+
+
+
+
+            <input type="text" id="customerName" placeholder="Your Name">
+
+
+
+
+
+
+            <input type="text" id="customerPhone" placeholder="Phone Number">
+
+
+
+
+
+
+            <textarea id="customerAddress" placeholder="Full Address">
+
+</textarea>
+
+
+
+
+
+
+
+
+            <button type="button" id="checkoutBtn">
+
+🛒 Place Order
+
+</button>
+
+
+
+        </div>
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- TOAST -->
+
+
+    <div id="toast">
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- JAVASCRIPT -->
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
